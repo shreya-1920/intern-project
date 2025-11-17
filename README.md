@@ -32,7 +32,7 @@ How to Run the Project
 3.Done
 
 LIVE DEMO:
-
+https://intern-project1-git-main-shreya-s-projects-81d07611.vercel.app/
 
 API USED:
 FakeStore API → https://fakestoreapi.com/products
