@@ -1,0 +1,141 @@
+
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --card-bg: #f8f8f8;
+  --border: #ddd;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --card-bg: #1e1e1e;
+  --border: #444;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.header {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
+}
+.logo{
+    width:100px;
+    position:absolute;
+    left: 20px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+button {
+  padding: 8px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+#themeToggle {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 200px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.card button {
+  width: 100%;
+  margin-top: 10px;
+  background: #ff9800;
+  color: white;
+}
+
+
+#modal {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000075;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--bg);
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 80%;
+  height: 200px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .filter-bar { flex-direction: column; }
+  input, select { width: 100%; }
+}

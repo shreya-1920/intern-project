@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Product Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <img src="logo.png" alt="logo" class="logo"> 
+    <h1 class="title">Mini Product Dashboard</h1>
+    
+    <button id="themeToggle">Dark Mode</button>
+  </header>
+
+ 
+  <div class="filter-bar">
+    <input type="text" id="searchBox" placeholder="Search product..." />
+    <select id="categoryFilter"></select>
+    <select id="sortFilter">
+      <option value="">Sort</option>
+      <option value="low">Low → High</option>
+      <option value="high">High → Low</option>
+    </select>
+  </div>
+
+  
+  <div class="products" id="productGrid"></div>
+
+ 
+  <div id="modal">
+    <div class="modal-content">
+      <h3 id="modalTitle"></h3>
+      <img id="modalImg" />
+      <p id="modalDesc"></p>
+      <p><b>Price: $<span id="modalPrice"></span></b></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
